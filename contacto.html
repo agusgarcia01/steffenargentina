@@ -74,19 +74,28 @@
 
   <form
   action="https://formspree.io/f/xlgwnnab"
-  method="POST"
->
-  <label>
-    Your email:
-    <input type="email" name="email">
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label>
-  <!-- your other form fields go here -->
-  <button type="submit">Send</button>
+  method="POST">
+    <label> Nombre: </label><input type="text" name="nombre" placeholder="Nombre" required></label>
+    <label> Apellido: </label><input type="text" name="apellido" placeholder="Apellido" required></label>
+    <select name="rubro" required>
+      <option value="">Categoría</option>
+      <option value="Salón de belleza">Salón de belleza</option>
+      <option value="Perfumería">Perfumería</option>
+      <option value="Distribuidora">Distribuidora</option>
+      <option value="Particular">Particular</option>
+    </select>
+    <label> Localidad: </label><input type="text" name="localidad" placeholder="Localidad/Ciudad" required>
+    <label> Provincia: </label><input type="text" name="provincia" placeholder="Provincia" required>
+    <label> Email: <input type="email" name="email"> </label>
+    <label> Telefono: </label><input type="tel" name="telefono" placeholder="Teléfono" required>
+    <label> Mensaje:<textarea name="message"></textarea> </label>
+
+  <!-- your other form fields go here -->   
+    <button type="submit">Send</button>
 </form>
+
+
+
 
   <!-- Aquí se mostrará el mensaje -->
   <div id="mensaje-envio" style="margin-top: 20px; font-weight: bold;"></div>
