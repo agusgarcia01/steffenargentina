@@ -49,6 +49,7 @@
     <h3>ENVIANOS TU CONSULTA</h3>
 
   <div class="form-container">
+
   <form id="formulario-contacto">
 
     <input type="text" name="nombre" placeholder="Nombre" required>
@@ -69,6 +70,23 @@
 
    <button type="submit">ENVIAR</button>
   </form>
+
+
+  <form
+  action="https://formspree.io/f/xlgwnnab"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>
 
   <!-- Aquí se mostrará el mensaje -->
   <div id="mensaje-envio" style="margin-top: 20px; font-weight: bold;"></div>
