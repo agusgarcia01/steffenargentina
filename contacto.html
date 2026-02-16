@@ -47,7 +47,7 @@
   <div class="contact-contenido">
     <div class="texto">
     <h3>ENVIANOS TU CONSULTA</h3>
-
+<!---
   <div class="form-container">
 
   <form id="formulario-contacto">
@@ -70,13 +70,13 @@
 
    <button type="submit">ENVIAR</button>
   </form>
-
+--->
 
   <form
   action="https://formspree.io/f/xlgwnnab"
   method="POST">
-    <label> Nombre: </label><input type="text" name="nombre" placeholder="Nombre" required></label>
-    <label> Apellido: </label><input type="text" name="apellido" placeholder="Apellido" required></label>
+    <label> <input type="text" name="nombre" placeholder="Nombre" required></label>
+    <label> <input type="text" name="apellido" placeholder="Apellido" required></label>
     <select name="rubro" required>
       <option value="">Categoría</option>
       <option value="Salón de belleza">Salón de belleza</option>
@@ -84,11 +84,11 @@
       <option value="Distribuidora">Distribuidora</option>
       <option value="Particular">Particular</option>
     </select>
-    <label> Localidad: </label><input type="text" name="localidad" placeholder="Localidad/Ciudad" required>
-    <label> Provincia: </label><input type="text" name="provincia" placeholder="Provincia" required>
-    <label> Email: <input type="email" name="email"> </label>
-    <label> Telefono: </label><input type="tel" name="telefono" placeholder="Teléfono" required>
-    <label> Mensaje:<textarea name="message"></textarea> </label>
+    <label> <input type="text" name="localidad" placeholder="Localidad/Ciudad" required> </label>
+    <label> <input type="text" name="provincia" placeholder="Provincia" required> </label>
+    <label> <input type="email" name="email" placeholder="Email" required> </label>
+    <label> <input type="tel" name="telefono" placeholder="Teléfono" required> </label>
+    <label> <textarea name="message" placeholder="Escribir mensaje" required></textarea> </label>
 
   <!-- your other form fields go here -->   
     <button type="submit">Send</button>
