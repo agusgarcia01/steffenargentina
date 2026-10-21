@@ -31,25 +31,23 @@
 
 
 
-  <!-- Hero + Beneficios (fondo bandera) -->
-  <div class="hero-flag">
-    <div class="flag-bg" aria-hidden="true">
-      <div class="flag-folds"></div>
-      <svg class="flag-waves" viewBox="0 0 1440 600" preserveAspectRatio="none">
-        <defs>
-          <linearGradient id="waveShade" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#000" stop-opacity="0"/>
-            <stop offset="1" stop-color="#000" stop-opacity="0.04"/>
-          </linearGradient>
-        </defs>
-        <path class="wave w1" fill="url(#waveShade)" d="M0 260 C180 170 540 350 720 260 S1260 350 1440 260 S1980 350 2160 260 S2700 350 2880 260 V600 H0Z"/>
-        <path class="wave w2" fill="url(#waveShade)" d="M0 370 C180 300 540 440 720 370 S1260 440 1440 370 S1980 440 2160 370 S2700 440 2880 370 V600 H0Z"/>
-        <path class="wave w3" fill="url(#waveShade)" d="M0 470 C180 425 540 515 720 470 S1260 515 1440 470 S1980 515 2160 470 S2700 515 2880 470 V600 H0Z"/>
-      </svg>
-    </div>
+  <!-- Hero + Beneficios (video de fondo en loop, sin controles) -->
+  <div class="hero-flag seccion-oscura">
+    <video class="hero-video" autoplay muted loop playsinline preload="auto"
+           disablepictureinpicture disableremoteplayback controlslist="nodownload nofullscreen noremoteplayback"
+           poster="video/hero-fondo-poster.jpg" aria-hidden="true" tabindex="-1">
+      <!-- celulares: versión 720p, más liviana; computadoras: 1080p -->
+      <source src="video/hero-fondo-720.mp4" type="video/mp4" media="(max-width: 768px)">
+      <source src="video/hero-fondo.mp4" type="video/mp4">
+    </video>
+    <div class="hero-video-shade" aria-hidden="true"></div>
 
   <section class="hero">
-    <img src="img/logofull.png" alt="Logo central" class="hero-logo">
+    <!-- logo en oro metálico: la forma del PNG recorta un degradado dorado con un brillo que lo recorre -->
+    <div class="hero-logo-gold" role="img" aria-label="Steffen cosmética capilar">
+      <span class="hlg-metal"></span>
+      <span class="hlg-shine"></span>
+    </div>
     <p class="years"><span class="years-num" data-count="20" data-prefix="+">+20</span> AÑOS</p>
     <h1>EN TU SALÓN DE BELLEZA</h1>
     <p class="sub">USO PROFESIONAL</p>

@@ -20,6 +20,21 @@
     reveals.forEach(function (el) { el.classList.add('visible'); });
   }
 
+  /* Video de fondo del inicio: si el navegador lo pausó (pestaña en segundo plano, ahorro de
+     batería), lo vuelve a reproducir cuando la página está a la vista */
+  var heroVideo = document.querySelector('.hero-video');
+  if (heroVideo) {
+    var playHero = function () {
+      if (document.visibilityState === 'visible' && heroVideo.paused) {
+        var p = heroVideo.play();
+        if (p && p.catch) p.catch(function () { /* autoplay bloqueado: queda la imagen fija */ });
+      }
+    };
+    document.addEventListener('visibilitychange', playHero);
+    heroVideo.addEventListener('canplay', playHero);
+    playHero();
+  }
+
   /* Header: se achica y se vuelve translúcido al bajar */
   var header = document.querySelector('.site-header');
   if (header) {
